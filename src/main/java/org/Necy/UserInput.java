@@ -40,11 +40,11 @@ public record UserInput(Scanner scanner) {
         System.out.println("Thank you for using the app");
     }
 
-    //HELPER: This handles invalid cases where user makes invalid input
+    //HELPER: This handles invalid cases to prevent the app from crashing when user enters invalid input
     private int enterNumber() {
         while (!scanner.hasNextInt()) {
             System.out.println("Invalid input! Please input a number");
-            scanner.next(); // this helps to clear invalid text so java doesn't get stuck while trying to process the invalid input
+            scanner.next(); // this helps to clear invalid text so java doesn't get stuck while trying to reprocess the invalid input
         }
         return scanner.nextInt();
     }
